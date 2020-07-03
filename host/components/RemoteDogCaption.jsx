@@ -60,6 +60,7 @@ export default ({ name }) => {
         react: {
           get: () => Promise.resolve(() => require("react")),
           loaded: true,
+          version: [99, 99, 99],
         },
       },
       global.__webpack_require__ ? global.__webpack_require__.o : {}

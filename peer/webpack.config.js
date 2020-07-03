@@ -10,6 +10,11 @@ module.exports = {
     extensions: [".jsx", ".js", ".json"],
   },
 
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+  },
+
   devServer: {
     port: 8081,
   },
@@ -42,7 +47,7 @@ module.exports = {
       exposes: {
         "./DogCaption": "./src/DogCaption",
       },
-      shared: require("./package.json").dependencies,
+      shared: [],
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
